@@ -1,0 +1,10 @@
+services:
+  database:
+    container_name: database
+    image: postgres:13.10
+    environment:
+      - LC_ALL=C.UTF-8
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - 5433:5432

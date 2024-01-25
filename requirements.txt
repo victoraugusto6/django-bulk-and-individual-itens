@@ -1,0 +1,12 @@
+django
+python-decouple
+django-extensions
+django-admin-extra-buttons
+more-itertools
+dj-database-url
+gunicorn
+psycopg2
+
+model-bakery
+ipdb
+faker
