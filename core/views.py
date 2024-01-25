@@ -1,12 +1,11 @@
 import csv
-from io import TextIOWrapper
 import logging
+from io import TextIOWrapper
 from time import time
-from django.db import IntegrityError
-
-from more_itertools import batched
 
 from core.models import Pessoa
+from django.db import IntegrityError
+from more_itertools import batched
 
 
 def read_csv_file(file):

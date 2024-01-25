@@ -1,8 +1,9 @@
 import csv
+import random
 import re
 import sys
+
 from faker import Faker
-import random
 
 fake = Faker("pt_BR")
 

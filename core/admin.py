@@ -1,12 +1,11 @@
+from admin_extra_buttons.decorators import button
+from admin_extra_buttons.mixins import ExtraButtonsMixin
+from core.models import Pessoa
+from core.views import import_csv_file
 from django import forms
 from django.contrib import admin
 from django.core.validators import FileExtensionValidator
-from admin_extra_buttons.mixins import ExtraButtonsMixin
-from admin_extra_buttons.decorators import button
 from django.template.response import TemplateResponse
-
-from core.models import Pessoa
-from core.views import import_csv_file, import_individual_csv_file
 
 
 class UploadForm(forms.Form):
@@ -36,7 +35,6 @@ class PessoaAdmin(ExtraButtonsMixin, admin.ModelAdmin):
                 file = request.FILES["file"]
                 qtd_itens_batched = form.cleaned_data["qtd_itens_batched"]
                 import_csv_file(file, qtd_itens_batched)
-                # import_individual_csv_file(file)
         else:
             form = UploadForm()
         context["form"] = form

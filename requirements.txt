@@ -10,3 +10,7 @@ psycopg2
 model-bakery
 ipdb
 faker
+flake8
+black
+isort
+pre-commit
